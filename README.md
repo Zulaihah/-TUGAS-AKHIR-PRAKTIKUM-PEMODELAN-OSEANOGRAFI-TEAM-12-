@@ -13,12 +13,12 @@ Fenomena aliran dan transportasi adalah fenomena alam yang penting untuk dipelaj
 Matematika merupakan alat yang menarik untuk memodelkan fenomena  alam, karena matematika merancang fenomena alam dalam bentuk struktur matematika. Persamaan  lain yang memodelkan fenomena  alam adalah persamaan  yang sering disebut persamaan konveksi-difusi atau persamaan transpor. Persamaan konveksi-difusi adalah rumus yang digunakan untuk mempelajari fenomena transportasi polutan. Persamaan transpor merupakan salah satu persamaan diferensial yang menggambarkan sirkulasi aliran air di suatu muara dengan besaran C (konsentrasi garam) sebagai fungsi ruang dan waktu. Pemodelan matematika sering menemukan persamaan diferensial kompleks yang perlu diselesaikan secara analitik. Namun, solusi dari persamaan diferensial ini tidak hanya analitik, tetapi juga  numerik. Solusi numerik adalah metode untuk merumuskan masalah matematika  sehingga mereka dapat diselesaikan dengan operasi aritmatika dan operasi logika. Dengan perkembangan komputer dengan waktu komputasi yang  cepat,  pemodelan matematika menjadi lebih umum dengan penerapan metode numerik yang memfasilitasi penyelesaian persamaan matematika dalam  model matematika yang  dibuat. Teknik numerik kadang-kadang disebut sebagai matematika komputasi karena komputer digital pandai melakukan operasi tersebut.
 
 ADVEKSI-DIFUSI 1D
- Persamaan adveksi 1 dimensi yang digunakan :
-  df/dt= -U df/dx
- Persamaan difusi 1 dimensi yang digunakan :
-  df/dt = Ad d**2f/dx
- Persamaan adveksi - difusi 1 dimensi yang digunakan :
-  df/dt = -U df/dx + Ad d**2f/dx
+Persamaan adveksi 1 dimensi yang digunakan :
+df/dt= -U df/dx
+Persamaan difusi 1 dimensi yang digunakan :
+df/dt = Ad d**2f/dx
+Persamaan adveksi - difusi 1 dimensi yang digunakan :
+df/dt = -U df/dx + Ad d**2f/dx
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisienadveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
 # Modul 1 : Persamaan Adveksi - Difusi 1D
 Penerapan Adveksi-Difusi 1D di dalam bidang Oseaografi :
