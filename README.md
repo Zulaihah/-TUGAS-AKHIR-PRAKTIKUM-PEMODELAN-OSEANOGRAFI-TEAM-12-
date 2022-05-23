@@ -19,7 +19,8 @@ Persamaan difusi 1 dimensi yang digunakan :
 df/dt = Ad d**2f/dx
 Persamaan adveksi - difusi 1 dimensi yang digunakan :
 df/dt = -U df/dx + Ad d**2f/dx
-Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisienadveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
+Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
+
 # Modul 1 : Persamaan Adveksi - Difusi 1D
 Penerapan Adveksi-Difusi 1D di dalam bidang Oseaografi :
 - Mengetahui konsentrasi dan penyebaran polutan di sungai, parit, dan cabang sungai
