@@ -41,7 +41,10 @@ Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2)digabungka
 ![Screenshot (331)](https://user-images.githubusercontent.com/92524237/170059773-47f8a34f-6a94-4b95-a9d1-3641ed229661.png)
 
 **Diskritisasi Model Persamaan Adveksi-Difusi1 Dimensi**
-  Penyelesaian persamaan (4.1) dilakukan dengan beda hingga dimana sukuAdveksi menggunakan Metode Eksplisit Upstream, sedangkan suku difusimenggunakan pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunanruang.
+  Penyelesaian persamaan (4.1) dilakukan dengan beda hingga dimana sukuAdveksi menggunakan Metode Eksplisit Upstream, sedangkan suku difusimenggunakan pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunan ruang.
+![Screenshot (333)](https://user-images.githubusercontent.com/92524237/170060292-6b0c9f94-57d0-4669-a031-1880b8db3a83.png)
+![Screenshot (335)](https://user-images.githubusercontent.com/92524237/170060499-34c19b79-54a3-4e80-92a9-07a03b87dfb4.png)
+
 
 HIDRODINAMIKA
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
