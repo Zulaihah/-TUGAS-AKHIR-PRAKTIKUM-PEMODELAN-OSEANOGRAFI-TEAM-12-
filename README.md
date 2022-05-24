@@ -28,6 +28,8 @@ df/dt = -U df/dx + Ad d**2f/dx
 
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
 
+![image](![Screenshot (327)](https://user-images.githubusercontent.com/92524237/170057822-b53af133-22b1-4131-a6ff-464eb60268b2.png)
+
 HIDRODINAMIKA
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
 # 2. METODE DAN HASIL
