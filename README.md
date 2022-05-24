@@ -1,7 +1,7 @@
 # TUGAS AKHIR PRAKTIKUM PEMODELAN OSEANOGRAFI TEAM 12 
 Repositori ini dibuat untuk memenuhi tugas akhir kelompok praktikum pemodelan oseanografi tahun 2022. Harapan kami semoga repositori ini dapat bermanfaat bagi kita semua.
 # NAMA ANGGOTA TEAM 12
-1. Afiq Mahasin
+1. Afiq Mahasin 26050120130084 A
 2. Galung Dhiva Maharani 26050120120010 A
 3. Moses Wicaksono Kurniawan 26050120120005 A
 4. Maldiva Hafiza Anjarika Suhendar
@@ -27,6 +27,7 @@ Penerapan Adveksi-Difusi 1D di dalam bidang Oseaografi :
 - Pemodelan polutan
 - Konservasi lingkungan
 # Modul 2 : Persamaan Adveksi - Difusi 2D
+Metode Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda majuuntuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.
 Penerapan Adveksi-Difusi 2D di dalam bidang Oseaografi :
 - Menghitung dan memodelkan persebaran nutrien di laut atau sungai
 - Menghitung dan memodelkan penyebaran polutan dari proses industri
