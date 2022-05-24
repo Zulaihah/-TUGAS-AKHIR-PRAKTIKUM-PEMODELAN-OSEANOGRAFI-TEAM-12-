@@ -29,11 +29,13 @@ df/dt = -U df/dx + Ad d**2f/dx      (3)
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
 
 **Diskritisasi Model Persamaan Adveksi 1 Dimensi**
-
 Persamaan beda hingga dengan metode ini adalah pendekatan beda maju untukturunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arahkecepatan u. Jika u>0 maka turunan terhadap ruang menggunakan pendekatan bedamundur, sebaliknya jika u<0 digunakan pendekatan beda maju. Persamaan (1)didiskritisasi menjadi:
 ![Screenshot (327)](https://user-images.githubusercontent.com/92524237/170057822-b53af133-22b1-4131-a6ff-464eb60268b2.png)
 Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2)digabungkan sehingga diskritisasi persamaan adveksi dengan metode upstream adalah:
 ![Screenshot (329)](https://user-images.githubusercontent.com/92524237/170058870-f28a42f8-6edb-4efb-8405-4081cc83da38.png)
+
+**Diskritisasi Model Persamaan Difusi 1 Dimensi**
+Persamaan beda hingga mentode ini adalah pendekatan beda maju untuk turunanwaktu dan beda pusat untuk turunan ruang. Bila indeks n untuk waktu, indeks i untukruang, dan AD dianggap konstan terhadap ruang dan waktu, maka persamaan (3.1) dapatdideskritisasi menjadi :
 
 HIDRODINAMIKA
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
