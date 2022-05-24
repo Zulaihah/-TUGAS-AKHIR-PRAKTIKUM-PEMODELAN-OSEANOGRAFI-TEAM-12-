@@ -224,13 +224,13 @@ from siphon.simplewebservice.ndbc import NDBC
 
 -Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
 #####################################################
-# Get a pandas data frame of ll of observations, meteorological data is the default
-# observation set to query.
+#Get a pandas data frame of ll of observations, meteorological data is the default
+#observation set to query.
 df = NDBC.realtime_observations('51004') #Station ID
 df.head()
 -Memberikan perintah plotting/melakukan plotting data pada grafik
 #####################################################
-# Let's make a simple time series plot to checkout what the data look like.
+#Let's make a simple time series plot to checkout what the data look like.
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
 ax2b = ax2.twinx()
 
