@@ -204,6 +204,69 @@ for i in range(1, 16):
 plt.show()
 ```
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
+Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali.
+Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
+Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
+1. Pembuatan script melalui jupyter notebook
+# Copyright (c) 2018 Siphon Contributors.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+"""
+NBCD Buoy Meteorological Data Request
+=====================================
+The NDBC keeps a 45-day recent rolling file for each buoy. This examples shows how to access
+the basic meteorological data from a buoy and make a simple plot.
+"""
+-import library yang digunakan
+import matplotlib.pyplot as plt
+
+from siphon.simplewebservice.ndbc import NDBC
+
+-Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
+#####################################################
+# Get a pandas data frame of ll of observations, meteorological data is the default
+# observation set to query.
+df = NDBC.realtime_observations('51004') #Station ID
+df.head()
+-Memberikan perintah plotting/melakukan plotting data pada grafik
+#####################################################
+# Let's make a simple time series plot to checkout what the data look like.
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
+ax2b = ax2.twinx()
+
+-Plotting data pressure, water temperature, wind speed, gust dan direction dalam model hidrodinamika 2D
+#Pressure
+ax1.plot(df['time'], df['pressure'], color='black')
+ax1.set_ylabel('Pressure[hPa]')
+fig.suptitle('Vany Siregar_26050120120013_A', fontsize=18)
+
+
+#Wind speed, gust, direction
+ax2.plot(df['time'], df['wind_speed'], color='tab:orange')
+ax2.plot(df['time'], df['wind_gust'], color='tab:olive', linestyle='--')
+ax2b.plot(df['time'], df['wind_direction'], color='tab:blue', linestyle='-')
+ax2.set_ylabel('Wind Speed [m/s]')
+ax2b.set_ylabel('Wind Direction')
+
+
+#Water temperature
+ax3.plot(df['time'], df['water_temperature'], color='tab:brown')
+ax3.set_ylabel('Water Temperature [degC]')
+
+-Menampilkan grafik dengan perintah
+plt.show() 
+-Diperoleh hasil berupa 3 grafik sebagai berikut
+![image](https://user-images.githubusercontent.com/106015798/170116656-881bda47-2565-47e9-9bec-6028f310e416.png)
+
+2. Masuk ke website NDBC lalu stasiun ID disesuaikan dengan ketentuan NIM
+![image](https://user-images.githubusercontent.com/106015798/170117010-341d66a5-683d-4d2b-909a-8dc90a63bfc2.png)
+Sehingga diketahui kondisi pada stasiun ID yang diinginkan
+![image](https://user-images.githubusercontent.com/106015798/170117262-8e297a7c-8613-46f1-96d6-45745a6e8114.png)
+![image](https://user-images.githubusercontent.com/106015798/170117292-0c5f0e3b-f7fc-4214-8f63-b5742873a2d1.png)
+
+Penjelasan:
+Dari stasiun ID yang dapatkan yaitu 51004 terletak pada koordinat 17.538 N 152.230 W (17°32'17" N 152°13'48" W). Stasiun ID ini berada di Southeast Hawaii, Hawaii Island Amerika Serikat. Hasil yang diperoleh melalui data yang disediakan oleh National Data Buoy Pusat (NDBC) Amerika Serikat terdiri dari tekanan, kecepatan angin, arah angin dan sebagainya. Untuk hasil tekanan atau pressure yang didapat adalah bervariasi mulai dari 1010 hPa hingga 1020 hPa. Di waktu tertentu tekanan bisa menjadi sangat tinggi ataupun sangat rendah, seperti pada tanggal 4 April 2022 dan 22 April 2022 tekanan di stasiun cukup tinggi sekitar diatas 1018 hPa, sedangkan pada sekitar tanggal 28 Maret 2022 tekanan turun cukup drastis mencapai 1011 hPa. Selanjutnya terdapat data wind speed dengan warna oranye, wind gust dengan warna olive, dan wind direction dengan warna biru. Dari hasil grafik yang dihasilkan, dapat dilihat bahwa wind speed dan wind gust relatif sama untuk periode naik dan turunnya, sedangkan berbeda dengan wind direction yang terdapat perbedaan seperti beda periode naik dan turun grafiknya. Nilai grafik yang paling tinggi didominasi oleh wind gust. Nilai wind speed selalu berada atau selalu lebih kecil dari nilai wind gust. Nilai tertinggi wind gust yaitu sekitar mendekati 17.5 yang terjadi pada 24 maret dan 4 april 2022. Sedangkan nilai tertinggi untuk wind speed adalah sekitar 12.5 m/s yang terjadi pada tanggal 4 april 2022. Untuk wind direction sendiri juga cukup bervariasi antara arah west atau barat (270º) hingga north atau utara (0º atau 360º). Pada hasil running modul 4 ini juga diperoleh grafik water temperature dimana untuk nilai water temperature yang diperoleh juga cukup bervariasi mulai darai 24,2 degC hingga  diatas 25 degC. Dari grafik dapat disimpulkan bahwa temperatur terendah terjadi pada tanggal 8 april hingga 13 April 2022. Untuk temperatur tertinggi terjadi pada 26 Maret 2022 dan 5 April 2022. 
+Dari ketiga data grafik yang diperoleh  dapat dilihat bahwa terdapat anomali yang terjadi yaitu sekitar tanggal 4 April 2022 yang menyebabkan kecepatan dan hembusan angin naik dengan diiringinya kenaikan temperatur air serta penurunan tekanan di wilayah tersebut. Anomali tersebut dapat terjadi karena adanya badai berupa hembusan angin yang cukup kencang yang terjadi di wilayah station ID di Southeast Hawaii, Hawaii Island. Namun, hal itu juga dapat terjadi karena adanya perubahan tekanan yang cukup drastis pada periode 4 April 2022 hingga 8 April 2022 sehingga menimbulkan pergerakan angin yang cukup kencang. Data – data parameter yang diperoleh seperti wind speed, pressure, wind direction, wind gust dan juga water temperature dapat digunakan untuk mengetahui arah angin, tinggi gelombang, periode gelombang, dan dan kecepatan angin selama periode waktu tertentu sehingga dapat digunakan sebagai sumber energi lepas pantai dengan menggabungkan energi angin lepas pantai dengan energi gelombang
 
 # 3. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # Modul 1 : Persamaan Adveksi - Difusi 1D
