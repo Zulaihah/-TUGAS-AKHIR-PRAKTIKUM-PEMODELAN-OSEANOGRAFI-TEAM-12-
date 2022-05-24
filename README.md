@@ -218,9 +218,9 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    the basic meteorological data from a buoy and make a simple plot.
    """
 -import library yang digunakan
-import matplotlib.pyplot as plt
+   import matplotlib.pyplot as plt
 
-from siphon.simplewebservice.ndbc import NDBC
+   from siphon.simplewebservice.ndbc import NDBC
 
 -Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
 #####################################################
