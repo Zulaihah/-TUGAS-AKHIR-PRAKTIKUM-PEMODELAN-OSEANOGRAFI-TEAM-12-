@@ -16,15 +16,15 @@ Matematika merupakan alat yang menarik untuk memodelkan fenomena  alam, karena m
 
 Persamaan adveksi 1 dimensi yang digunakan : 
 
-df/dt= -U df/dx
+df/dt= -U df/dx                     (1)
 
 Persamaan difusi 1 dimensi yang digunakan : 
 
-df/dt = Ad d**2f/dx
+df/dt = Ad d**2f/dx                 (2)
 
 Persamaan adveksi - difusi 1 dimensi yang digunakan : 
 
-df/dt = -U df/dx + Ad d**2f/dx
+df/dt = -U df/dx + Ad d**2f/dx      (3)
 
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
 
