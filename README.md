@@ -13,14 +13,14 @@ Fenomena aliran dan transportasi adalah fenomena alam yang penting untuk dipelaj
 Matematika merupakan alat yang menarik untuk memodelkan fenomena  alam, karena matematika merancang fenomena alam dalam bentuk struktur matematika. Persamaan  lain yang memodelkan fenomena  alam adalah persamaan  yang sering disebut persamaan konveksi-difusi atau persamaan transpor. Persamaan konveksi-difusi adalah rumus yang digunakan untuk mempelajari fenomena transportasi polutan. Persamaan transpor merupakan salah satu persamaan diferensial yang menggambarkan sirkulasi aliran air di suatu muara dengan besaran C (konsentrasi garam) sebagai fungsi ruang dan waktu. Pemodelan matematika sering menemukan persamaan diferensial kompleks yang perlu diselesaikan secara analitik. Namun, solusi dari persamaan diferensial ini tidak hanya analitik, tetapi juga  numerik. Solusi numerik adalah metode untuk merumuskan masalah matematika  sehingga mereka dapat diselesaikan dengan operasi aritmatika dan operasi logika. Dengan perkembangan komputer dengan waktu komputasi yang  cepat,  pemodelan matematika menjadi lebih umum dengan penerapan metode numerik yang memfasilitasi penyelesaian persamaan matematika dalam  model matematika yang  dibuat. Teknik numerik kadang-kadang disebut sebagai matematika komputasi karena komputer digital pandai melakukan operasi tersebut.
 
 ADVEKSI-DIFUSI 1D
-Persamaan adveksi 1 dimensi yang digunakan :
-df/dt= -U df/dx
-Persamaan difusi 1 dimensi yang digunakan :
-df/dt = Ad d**2f/dx
-Persamaan adveksi - difusi 1 dimensi yang digunakan :
-df/dt = -U df/dx + Ad d**2f/dx
+Persamaan adveksi 1 dimensi yang digunakan : df/dt= -U df/dx
+Persamaan difusi 1 dimensi yang digunakan : df/dt = Ad d**2f/dx
+Persamaan adveksi - difusi 1 dimensi yang digunakan : df/dt = -U df/dx + Ad d**2f/dx
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
-# 2. METODE 
+
+HIDRODINAMIKA
+Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
+# 2. METODE DAN HASIL
 1. Modul 2 : Persamaan Adveksi - Difusi 2D
 2. Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 3. Modul 4 : Persamaan Hidrodinamika 2D Sederhana
@@ -66,6 +66,12 @@ dx = 3
 
 dy = 3
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
+Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
+
+Masukan library yang diperlukan yakni Matplotlib dan Numpy
+import matplotlib.pyplot as plt
+import numpy as np
+
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
 # 3. PENERAPAN DALAM BIDANG OSEANOGRAFI
