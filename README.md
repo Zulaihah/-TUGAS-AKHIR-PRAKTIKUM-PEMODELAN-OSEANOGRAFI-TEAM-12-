@@ -35,23 +35,37 @@ dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 
 Contoh Script :
 
 #parameter awal
+
 C = 0.84  #nilai kecepatan aliran
+
 ad = 1.84  #koefisiendifusi
 
 #skenario 1
+
 #theta = 84 #CFL:0.569473691923612
+
 #skenario 2
+
 #theta = 60 + 84 #CFL:0.6198796573015902
+
 #skenario 3
+
 #theta = 135 + 84 #CFL:0.6250694134910891
+
 #skenario 4
+
 theta = 315 + 84 #CFL:0.6250694134910892
 
 #paramter lanjutan
+
 q = 0.95
+
 x = 300
+
 y = 300
+
 dx = 3
+
 dy = 3
 
 
