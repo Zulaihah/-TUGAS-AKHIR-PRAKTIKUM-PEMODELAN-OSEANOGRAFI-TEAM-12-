@@ -69,8 +69,8 @@ dy = 3
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
 Masukan library yang diperlukan yakni Matplotlib dan Numpy
-import matplotlib.pyplot as plt
-import numpy as np
+'''import matplotlib.pyplot as plt
+import numpy as np'''
 
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
