@@ -33,23 +33,8 @@ dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 
 ![image](https://user-images.githubusercontent.com/78490254/169945433-59a4eae5-71df-4a11-b1e8-fc93e0b8c75e.png)
 
 Salah satu script pada Adveksi-Difusi 2D sebagai berikut : 
-for i in range(1, Mmax+1):
-  zo[i-1] = A*np.cos(k*(i)*dx)
-  uo[i-1] = A*C*np.cos(k*((i)*dx+(0.5)*dx))/(D+zo[i-1])
-for i in range(1, Nmax+1):
-  zb = [None for _ in range(Mmax)]
-  ub = [None for _ in range(Mmax)]
-  zb[0] = A*np.cos(s*(i)*dt)
-  ub[-1] = A*C*np.cos(k*L-s*(i)*dt)/(D+zo[-1])
-  for j in range (1, Mmax):
-    ub[j-1] = uo[j-1]-g*(dt/dx)*(zo[j]-zo[j-1])
-  for k in range(2, Mmax+1):
-    zb[k-1] = zo[k-1]-(D+zo[k-1])*(dt/dx)*(ub[k-1]-ub[k-2])
-    hasilu[i-1] = ub
-    hasilz[i-1] = zb
-  for p in range(0, Mmax):
-    uo[p] = ub[p]
-    zo[p] = zb[p]
+
+
 Penerapan Persamaan Persamaan Adveksi - Difusi 2D di dalam bidang oseanografi :
 - Menghitung dan memodelkan persebaran nutrien di laut atau sungai 
 - Menghitung dan memodelkan penyebaran polutan dari proses industri
