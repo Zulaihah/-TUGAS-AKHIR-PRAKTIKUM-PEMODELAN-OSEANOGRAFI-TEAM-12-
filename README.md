@@ -223,11 +223,11 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    from siphon.simplewebservice.ndbc import NDBC
 
 -Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
-#####################################################
-#Get a pandas data frame of ll of observations, meteorological data is the default
-#observation set to query.
-df = NDBC.realtime_observations('51004') #Station ID
-df.head()
+   #####################################################
+   #Get a pandas data frame of ll of observations, meteorological data is the default
+   #observation set to query.
+   df = NDBC.realtime_observations('51004') #Station ID
+   df.head()
 -Memberikan perintah plotting/melakukan plotting data pada grafik
 #####################################################
 #Let's make a simple time series plot to checkout what the data look like.
