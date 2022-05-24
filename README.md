@@ -33,7 +33,7 @@ dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 
 ![image](https://user-images.githubusercontent.com/78490254/169945433-59a4eae5-71df-4a11-b1e8-fc93e0b8c75e.png)
 
 Salah satu script pada Adveksi-Difusi 2D sebagai berikut : 
-
+Untitled3.ipynb
 
 Penerapan Persamaan Persamaan Adveksi - Difusi 2D di dalam bidang oseanografi :
 - Menghitung dan memodelkan persebaran nutrien di laut atau sungai 
