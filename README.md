@@ -27,9 +27,12 @@ Penerapan Adveksi-Difusi 1D di dalam bidang Oseaografi :
 - Pemodelan polutan
 - Konservasi lingkungan
 # Modul 2 : Persamaan Adveksi - Difusi 2D
-Metode Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda majuuntuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.
-Penerapan Adveksi-Difusi 2D di dalam bidang Oseaografi :
-- Menghitung dan memodelkan persebaran nutrien di laut atau sungai
+Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.Persamaan pembangun yang berhubungan dengan transportasi konsentrasi polutan berupa persamaan Difusi 2D yakni 
+![image](https://user-images.githubusercontent.com/78490254/169945155-12fcf280-d912-42c3-82e3-6df12c6b44da.png)
+dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 dan 𝑦. Konstanta 𝑉𝑥 dan 𝑉𝑦 disini menyatakan kecepatan aliran yang searah sumbu 𝑥 dan 𝑦 berturut turut. Juga 𝐷𝑥 dan 𝐷𝑦 juga merupakan konstanta yang menyatakan koefisien difusi yang searah sumbu 𝑥 dan sumbu 𝑦 berturut turut. Adapun syarat awal dan syarat batas yang menyertai persamaan pembangun akan dimulai dari domain yang teratur sebagai verifikasi solusi numerik, hingga ke domain yang tidak teratur,dan persamaan diskritisasi untuk model adveksi difusi 2D adalah sebagai berikut:
+![image](https://user-images.githubusercontent.com/78490254/169945433-59a4eae5-71df-4a11-b1e8-fc93e0b8c75e.png)
+Penerapan Persamaan Persamaan Adveksi - Difusi 2D di dalam bidang oseanografi :
+- Menghitung dan memodelkan persebaran nutrien di laut atau sungai 
 - Menghitung dan memodelkan penyebaran polutan dari proses industri
 - Mengetahui persebaran polutan dari laguna dengan menghitung input dan outputnya
 - Mengetahui sebaran kebocoran minyak di laut
