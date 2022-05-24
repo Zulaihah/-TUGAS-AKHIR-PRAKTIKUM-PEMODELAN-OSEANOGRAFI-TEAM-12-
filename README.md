@@ -208,7 +208,7 @@ Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrod
 Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
 1. Pembuatan script melalui jupyter notebook
-   # copyright (c) 2018 Siphon Contributors
+   # Copyright (c) 2018 Siphon Contributors.
    # Distributed under the terms of the BSD 3-clause license.
    # SPDX-License-Identifier: BSD-3-Clause
    """
@@ -221,6 +221,7 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    import matplotlib.pyplot as plt
 
    from siphon.simplewebservice.ndbc import NDBC
+  
 
 -Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
    #####################################################
