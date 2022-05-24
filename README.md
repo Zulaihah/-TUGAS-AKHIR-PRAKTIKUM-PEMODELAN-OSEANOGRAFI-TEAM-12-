@@ -204,7 +204,6 @@ for i in range(1, 16):
 plt.show()
 ```
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
-
 pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali.Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
 1 Pembuatan script melalui jupyter notebook
@@ -224,6 +223,35 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
   
 
 -Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
+   #####################################################
+# Get a pandas data frame of ll of observations, meteorological data is the default
+# observation set to query.
+df = NDBC.realtime_observations('51004') #Station ID
+df.head()
+
+#####################################################
+# Let's make a simple time series plot to checkout what the data look like.
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
+ax2b = ax2.twinx()
+
+#Pressure
+ax1.plot(df['time'], df['pressure'], color='black')
+ax1.set_ylabel('Pressure[hPa]')
+fig.suptitle('Vany Siregar_26050120120013_A', fontsize=18)
+
+
+#Wind speed, gust, direction
+ax2.plot(df['time'], df['wind_speed'], color='tab:orange')
+ax2.plot(df['time'], df['wind_gust'], color='tab:olive', linestyle='--')
+ax2b.plot(df['time'], df['wind_direction'], color='tab:blue', linestyle='-')
+ax2.set_ylabel('Wind Speed [m/s]')
+ax2b.set_ylabel('Wind Direction')
+
+
+#Water temperature
+ax3.plot(df['time'], df['water_temperature'], color='tab:brown')
+ax3.set_ylabel('Water Temperature [degC]')
+   
    #####################################################
    #Get a pandas data frame of ll of observations, meteorological data is the default
    #observation set to query.
