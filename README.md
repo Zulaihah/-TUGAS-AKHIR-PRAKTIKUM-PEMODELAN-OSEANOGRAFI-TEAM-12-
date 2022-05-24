@@ -208,9 +208,9 @@ Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrod
 Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
 1. Pembuatan script melalui jupyter notebook
-   #copyright (c) 2018 Siphon Contributors
-   #Distributed under the terms of the BSD 3-clause license.
-   #SPDX-License-Identifier: BSD-3-Clause
+   # copyright (c) 2018 Siphon Contributors
+   # Distributed under the terms of the BSD 3-clause license.
+   # SPDX-License-Identifier: BSD-3-Clause
    """
    NDBC Buoy Meteorological Data Request
    ======================================
@@ -229,10 +229,10 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    df = NDBC.realtime_observations('51004') #Station ID
    df.head()
 -Memberikan perintah plotting/melakukan plotting data pada grafik
-#####################################################
-#Let's make a simple time series plot to checkout what the data look like.
-fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
-ax2b = ax2.twinx()
+   #####################################################
+   #Let's make a simple time series plot to checkout what the data look like.
+   fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
+   ax2b = ax2.twinx()
 
 -Plotting data pressure, water temperature, wind speed, gust dan direction dalam model hidrodinamika 2D
 #Pressure
