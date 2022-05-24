@@ -12,7 +12,7 @@ Fenomena aliran dan transportasi adalah fenomena alam yang penting untuk dipelaj
 
 Matematika merupakan alat yang menarik untuk memodelkan fenomena  alam, karena matematika merancang fenomena alam dalam bentuk struktur matematika. Persamaan  lain yang memodelkan fenomena  alam adalah persamaan  yang sering disebut persamaan konveksi-difusi atau persamaan transpor. Persamaan konveksi-difusi adalah rumus yang digunakan untuk mempelajari fenomena transportasi polutan. Persamaan transpor merupakan salah satu persamaan diferensial yang menggambarkan sirkulasi aliran air di suatu muara dengan besaran C (konsentrasi garam) sebagai fungsi ruang dan waktu. Pemodelan matematika sering menemukan persamaan diferensial kompleks yang perlu diselesaikan secara analitik. Namun, solusi dari persamaan diferensial ini tidak hanya analitik, tetapi juga  numerik. Solusi numerik adalah metode untuk merumuskan masalah matematika  sehingga mereka dapat diselesaikan dengan operasi aritmatika dan operasi logika. Dengan perkembangan komputer dengan waktu komputasi yang  cepat,  pemodelan matematika menjadi lebih umum dengan penerapan metode numerik yang memfasilitasi penyelesaian persamaan matematika dalam  model matematika yang  dibuat. Teknik numerik kadang-kadang disebut sebagai matematika komputasi karena komputer digital pandai melakukan operasi tersebut.
 
-**ADVEKSI-DIFUSI 1D**
+- **ADVEKSI-DIFUSI 1D**
 
 Persamaan adveksi 1 dimensi yang digunakan : 
 
@@ -28,19 +28,19 @@ df/dt = -U df/dx + Ad d**2f/dx      (3)
 
 Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveksi, dan Ad adalah koefisien difusi, dan x adalah arah sumbu horisontal.
 
-**Diskritisasi Model Persamaan Adveksi 1 Dimensi**
+  - **Diskritisasi Model Persamaan Adveksi 1 Dimensi**
 
   Persamaan beda hingga dengan metode ini adalah pendekatan beda maju untukturunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arahkecepatan u. Jika u>0 maka turunan terhadap ruang menggunakan pendekatan bedamundur, sebaliknya jika u<0 digunakan pendekatan beda maju. Persamaan (1)didiskritisasi menjadi:
 ![Screenshot (327)](https://user-images.githubusercontent.com/92524237/170057822-b53af133-22b1-4131-a6ff-464eb60268b2.png)
 Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2)digabungkan sehingga diskritisasi persamaan adveksi dengan metode upstream adalah:
 ![Screenshot (329)](https://user-images.githubusercontent.com/92524237/170058870-f28a42f8-6edb-4efb-8405-4081cc83da38.png)
 
-**Diskritisasi Model Persamaan Difusi 1 Dimensi**
+  - **Diskritisasi Model Persamaan Difusi 1 Dimensi**
 
   Persamaan beda hingga mentode ini adalah pendekatan beda maju untuk turunanwaktu dan beda pusat untuk turunan ruang. Bila indeks n untuk waktu, indeks i untukruang, dan AD dianggap konstan terhadap ruang dan waktu, maka persamaan (3.1) dapatdideskritisasi menjadi :
 ![Screenshot (331)](https://user-images.githubusercontent.com/92524237/170059773-47f8a34f-6a94-4b95-a9d1-3641ed229661.png)
 
-**Diskritisasi Model Persamaan Adveksi-Difusi1 Dimensi**
+  - **Diskritisasi Model Persamaan Adveksi-Difusi1 Dimensi**
   Penyelesaian persamaan (4.1) dilakukan dengan beda hingga dimana sukuAdveksi menggunakan Metode Eksplisit Upstream, sedangkan suku difusimenggunakan pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunan ruang.
 ![Screenshot (333)](https://user-images.githubusercontent.com/92524237/170060292-6b0c9f94-57d0-4669-a031-1880b8db3a83.png)
 ![Screenshot (335)](https://user-images.githubusercontent.com/92524237/170060499-34c19b79-54a3-4e80-92a9-07a03b87dfb4.png)
