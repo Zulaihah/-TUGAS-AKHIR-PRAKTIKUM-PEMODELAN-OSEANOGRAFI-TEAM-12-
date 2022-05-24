@@ -32,6 +32,30 @@ Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga deng
 dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 dan 𝑦. Konstanta 𝑉𝑥 dan 𝑉𝑦 disini menyatakan kecepatan aliran yang searah sumbu 𝑥 dan 𝑦 berturut turut. Juga 𝐷𝑥 dan 𝐷𝑦 juga merupakan konstanta yang menyatakan koefisien difusi yang searah sumbu 𝑥 dan sumbu 𝑦 berturut turut. Adapun syarat awal dan syarat batas yang menyertai persamaan pembangun akan dimulai dari domain yang teratur sebagai verifikasi solusi numerik, hingga ke domain yang tidak teratur,dan persamaan diskritisasi untuk model adveksi difusi 2D adalah sebagai berikut:
 ![image](https://user-images.githubusercontent.com/78490254/169945433-59a4eae5-71df-4a11-b1e8-fc93e0b8c75e.png)
 
+Contoh Script :
+
+#parameter awal
+C = 0.84  #nilai kecepatan aliran
+ad = 1.84  #koefisiendifusi
+
+#skenario 1
+#theta = 84 #CFL:0.569473691923612
+#skenario 2
+#theta = 60 + 84 #CFL:0.6198796573015902
+#skenario 3
+#theta = 135 + 84 #CFL:0.6250694134910891
+#skenario 4
+theta = 315 + 84 #CFL:0.6250694134910892
+
+#paramter lanjutan
+q = 0.95
+x = 300
+y = 300
+dx = 3
+dy = 3
+
+
+
 Penerapan Persamaan Persamaan Adveksi - Difusi 2D di dalam bidang oseanografi :
 - Menghitung dan memodelkan persebaran nutrien di laut atau sungai 
 - Menghitung dan memodelkan penyebaran polutan dari proses industri
