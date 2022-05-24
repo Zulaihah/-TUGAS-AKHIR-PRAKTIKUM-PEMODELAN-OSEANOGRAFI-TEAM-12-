@@ -204,15 +204,21 @@ for i in range(1, 16):
 plt.show()
 ```
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
+
 pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali.Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
 1 Pembuatan script melalui jupyter notebook
    #Copyright (c) 2018 Siphon Contributors.
+   
    #Distributed under the terms of the BSD 3-clause license.
+   
    #SPDX-License-Identifier: BSD-3-Clause
+   
    """
    NDBC Buoy Meteorological Data Request
+   
    ======================================
+   
    The NDBC keeps a 45-day recent rolling file for each buoy. This examples shows how to access
    
    the basic meteorological data from a buoy and make a simple plot.
@@ -237,32 +243,49 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    df.head()
    
 -Memberikan perintah plotting/melakukan plotting data pada grafik
+
    #####################################################
+   
    #Let's make a simple time series plot to checkout what the data look like.
+   
    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
+   
    ax2b = ax2.twinx()
 
 -Plotting data pressure, water temperature, wind speed, gust dan direction dalam model hidrodinamika 2D
+
    #Pressure
+   
    ax1.plot(df['time'], df['pressure'], color='black')
+   
    ax1.set_ylabel('Pressure[hPa]')
+   
    fig.suptitle('Vany Siregar_26050120120013_A', fontsize=18)
 
 
 #Wind speed, gust, direction
+
    ax2.plot(df['time'], df['wind_speed'], color='tab:orange')
+   
    ax2.plot(df['time'], df['wind_gust'], color='tab:olive', linestyle='--')
+   
    ax2b.plot(df['time'], df['wind_direction'], color='tab:blue', linestyle='-')
+   
    ax2.set_ylabel('Wind Speed [m/s]')
+   
    ax2b.set_ylabel('Wind Direction')
 
 
    #Water temperature
+   
    ax3.plot(df['time'], df['water_temperature'], color='tab:brown')
+   
    ax3.set_ylabel('Water Temperature [degC]')
 
 -Menampilkan grafik dengan perintah
+
    plt.show() 
+   
 -Diperoleh hasil berupa 3 grafik sebagai berikut
 ![image](https://user-images.githubusercontent.com/106015798/170116656-881bda47-2565-47e9-9bec-6028f310e416.png)
 
