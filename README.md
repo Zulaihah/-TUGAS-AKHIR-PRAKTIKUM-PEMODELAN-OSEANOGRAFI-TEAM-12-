@@ -289,6 +289,11 @@ for i in range(1, 16):
 plt.show()
 ```
 
+Contoh Gambar Grafik Adveksi-Difusi 2D
+
+![image](https://user-images.githubusercontent.com/78490254/170168857-c1e52d3f-6dfe-4ea9-b058-09a8cb34349d.png)
+
+
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
 Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali. Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
