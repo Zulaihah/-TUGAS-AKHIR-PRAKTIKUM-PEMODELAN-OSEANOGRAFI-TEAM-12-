@@ -4,7 +4,7 @@ Repositori ini dibuat untuk memenuhi tugas akhir kelompok praktikum pemodelan os
 1. Afiq Mahasin 26050120130084 A
 2. Galung Dhiva Maharani 26050120120010 A
 3. Moses Wicaksono Kurniawan 26050120120005 A
-4. Maldiva Hafiza Anjarika Suhendar
+4. Maldiva Hafiza Anjarika Suhendar 26050120140060 B
 5. Siti Zulaihah 26050120130061 A
 6. Vany Siregar 26050120120013 A
 # 1. PENDAHULUAN
