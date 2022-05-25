@@ -176,6 +176,11 @@ for n in range (0, Nt):
     print('nilai CFL:' +str(cfl) + 'dengan arah: ' +str(theta))                                                                                                    
 ```
 
+Contoh Gambar Grafik Adveksi-Difusi 2D
+
+![image](https://user-images.githubusercontent.com/78490254/170168857-c1e52d3f-6dfe-4ea9-b058-09a8cb34349d.png)
+
+
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
@@ -289,9 +294,7 @@ for i in range(1, 16):
 plt.show()
 ```
 
-Contoh Gambar Grafik Adveksi-Difusi 2D
 
-![image](https://user-images.githubusercontent.com/78490254/170168857-c1e52d3f-6dfe-4ea9-b058-09a8cb34349d.png)
 
 
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
