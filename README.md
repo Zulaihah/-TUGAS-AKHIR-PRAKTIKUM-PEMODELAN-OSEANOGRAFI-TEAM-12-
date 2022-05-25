@@ -155,7 +155,27 @@ for n in range (0, Nt):
     F[n+1,:,Nx+1] = 0 #bc kanan
     #%%
 ```
-    
+
+#Pembuatan Grafik 
+```    
+#output gambar
+    plt.clf()
+    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading = 'auto', edgecolors = 'k')
+    cbar = plt.colorbar(orientation = 'vertical',shrink = 0.95, extend ='both')
+    cbar.set_label(label='concentration', size = 8)
+    #plt clim (0,100)
+    plt.title('Afiq Mahasin_26050120130084 \n t='+str(round(dt*(n+1),3))+', initial condition='+str(ic),fontsize=10)
+    plt.xlabel('x_grid',fontsize=9)
+    plt.ylabel('y_grid',fontsize=9)
+    plt.axis([0, x, 0, y])
+    #pltpause(0.01)
+    plt.savefig(str(n+1)+'.jpg', dpi = 300)
+    plt.pause(0.01)
+    plt.close()
+    print('running timestep ke:' +str(n+1) + 'dari:' +str(Nt) + '('+ percentage(n+1, Nt)+')')
+    print('nilai CFL:' +str(cfl) + 'dengan arah: ' +str(theta))                                                                                                    
+```
+
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
