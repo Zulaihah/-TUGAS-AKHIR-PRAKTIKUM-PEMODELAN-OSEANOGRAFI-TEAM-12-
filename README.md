@@ -203,22 +203,22 @@ import numpy as np
 ```
 - Kemudian masukkan parameter awal 
 ```
-p = 5000		#Panjang Grid
-T = 1200		#Waktu Simulasi
-A = 0.5		  #Amplitudo
-D = 15		  #Depth/Kedalaman
+p = 5000		      #Panjang Grid
+T = 1200		      #Waktu Simulasi
+A = 0.5		      #Amplitudo
+D = 15		      #Depth/Kedalaman
 dt = 2
 dx = 100
-To = 300		#Periode
+To = 300		      #Periode
 ```
 - Masukkan pula parameter lanjutannya
 ```
-g = 9.8		#Koefisien Gravitasi
+g = 9.8		      #Koefisien Gravitasi
 pi = np.pi 
 C = np.sqrt(g*D)	#Kecepatan Arus
-s = 2*pi/To		#Kecepatan Sudut Gelombang
-L = C*To		#Panjang Gelombang
-k = 2*pi/L		#Koefisien Panjang Gelombang
+s = 2*pi/To		   #Kecepatan Sudut Gelombang
+L = C*To		      #Panjang Gelombang
+k = 2*pi/L		   #Koefisien Panjang Gelombang
 Mmax = int(p//dx)
 Nmax = int(T//dt)
 ```
@@ -307,19 +307,35 @@ plt.show()
 Diperoleh hasil berupa 4 grafik sebagai berikut :
 1. Grafik Perubahan Kecepatan Arus Dalam Grid Tertentu di Sepanjang Waktu
 
-<img width="335" alt="image" src="https://user-images.githubusercontent.com/105976675/170175490-4814cc53-fb24-4333-b330-6e3763cdcc40.png">
+![image](https://user-images.githubusercontent.com/105976675/170176262-869b3deb-d660-40c0-9c16-e0dbc1ce78bc.png)
+
+Pembahasan :
+
+Pada grafik diatas, didapatkan model perubahan kecepatan arus dalam grid tertentu di sepanjang waktu. Dalam grafik tersebut diketahui bahwa perubahan kecepatan arus akan stabil hingga pada waktu ke 150 dengan kecepatan berada pada rentang -0.4 hingga 0.4 satuan kecepatan. Lama-kelamaan grafik tersebut di sepanjang waktu akan mengalami perubahan menjadi berantakan karena nilai parameter sudah semakin besar sehingga perhitungan semakin rumit. Namun, grafik yang berantakan tadi akan kembali halus pada akhir grid karena merupakan simulasi hidrodinamika satu dimensi. Dimana pada grafik yang tidak beraturan kecepatan arus maksimum terhadap waktunya mencapai lebih dari 1.5 atau sekitar 1.75 satuan kecepatan pada waktu antara 400 dan 500 (sekitar 490). Begitu juga dengan grafik yang tidak beraturan pada kecepatan arus minimum terhadap waktu mencapai -1.75 satuan kecepatan tepatnya pada waktu antara 500 dan 600 (sekitar 530).
 
 2. Grafik Perubahan Elevasi Permukaan Air Dalam Grid Tertentu di Sepanjang Waktu
 
-<img width="342" alt="image" src="https://user-images.githubusercontent.com/105976675/170175563-078ef4a7-9863-42cb-a964-6fa24ad1df2e.png">
+![image](https://user-images.githubusercontent.com/105976675/170176298-75b586f7-50ce-4181-ae55-928516a2bab5.png)
+
+Pembahasan :
+
+Pada grafik diatas didapatkan model perubahan elevasi permukaan air dalam grid tertentu di sepanjang waktu. Dari grafik di atas, dapat diketahui bahwa perubahan elevasi muka air akan stabil hingga pada waktu ke 175 dengan elevasi berada pada rentang -0.5 hingga 0.5 satuan elevasi. Setelah lebih dari waktu tersebut, grafik akan mengalami ketidakstabilan. Hal ini dikarenakan parameternya sudah menjadi besar sehingga perhitungannya menjadi lebih rumit. Pada waktu 550 hingga 600 atau mencapai grid terakhir, grafik yang dihasilkan akan kemabli halus seperti saat di grid awal. Perubahan elevasi maksimum dan minimum terhadap waktu dalam grafik di atas memiliki nilai perbedaan yang cukup besar antara grafik yang beraturan dan tidak beraturan. Dimana pada grafik yang tidak beraturan, nilai elevasi maksimum dan minimum terhadap waktu secara berurutan mencapai nilai sekitar 2.1 dan -2.1 satuan elevasi.
 
 3. Grafik Perubahan Kecepatan Arus  Dalam Waktu Tertentu di Sepanjang Grid
 
-<img width="338" alt="image" src="https://user-images.githubusercontent.com/105976675/170175626-feb51f73-5c9d-4475-b85a-f3f399751f04.png">
+![image](https://user-images.githubusercontent.com/105976675/170176325-c27235ec-727f-4bff-b7b3-8b94494b402b.png)
+
+Pembahasan :
+
+Pada grafik diatas didapatkan model perubahan kecepatan arus dalam waktu tertentu di sepanjang grid. Dari grafik di atas, terlihat hasil dari profil perubahan kecepatan arus dalam waktu tertentu di sepanjang grid dimana grafik dari grid 0 hingga 45 memiliki arah yang beraturan. Kemudian setelah melalui grid 45, grafik mulai menjadi tidak beraturan karena parameter awal sudah menjadi semakin besar sehingga nilai perhitungan menjadi lebih rumit. Oleh karenanya, grafik tidak beraturan hampir mencapai grid 50 (sekitar 49) baik pada t=1 hingga t=15. Nilai kecepatan arus maksimum dalam grid terjadi di awal grid dan saat mendekati grid 40 yaitu sebesar 0.4 satuan kecepatan, sedangkan nilai kecepatan arus minimum dalam grid terjadi di grid yang mendekati nilai 20 yaitu sekitar -0.42 satuan kecepatan.
 
 4. Grafik Perubahan Elevasi Permukaan Air Dalam Waktu Tertentu di Sepanjang Grid
 
-<img width="343" alt="image" src="https://user-images.githubusercontent.com/105976675/170175666-298b1a0a-6e41-4276-a41e-6fcfc23955ab.png">
+![image](https://user-images.githubusercontent.com/105976675/170176371-141c212f-ab07-46d6-a4af-9760a51077ea.png)
+
+Pembahasan :
+
+Pada grafik diatas didapatkan model perubahan elevasi permukaan air dalam waktu tertentu di sepanjang grid. Dari grafik di atas, terlihat hasil dari profil perubahan elevasi permukaan air dalam waktu tertentu di sepanjang grid yang interpretasinya hampir sama dengan grafik sebelumnya dimana grafik yang beraturan di awal akan memiliki perubahan saat mendekati akhir grid. Dimana grafik dari grid 0 hingga 47 memiliki arah yang beraturan. Kemudian setelah melalui grid 47, grafik mulai menjadi tidak beraturan karena parameter awal sudah menjadi semakin besar sehingga nilai perhitungan menjadi lebih rumit. Oleh karenanya, grafik tidak beraturan mencapai grid hampir 50 (sekitar 49) baik pada t=1 hingga t=15 yaitu ada yang menjorok ke bawah dan ada yang melengkung lagi ke atas. Nilai kecepatan arus maksimum dalam grid terjadi di awal grid dan saat mendekati grid 40 yaitu sekitar 0.45 satuan kecepatan, sedangkan nilai kecepatan arus minimum dalam grid terjadi di grid yang mendekati nilai 50 atau di grid akhir yaitu sekitar -0.62 satuan elevasi.
 
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
@@ -424,6 +440,7 @@ Sehingga diketahui kondisi pada stasiun ID yang diinginkan
 ![image](https://user-images.githubusercontent.com/106015798/170117292-0c5f0e3b-f7fc-4214-8f63-b5742873a2d1.png)
 
 Penjelasan:
+
 Dari stasiun ID yang dapatkan yaitu 51004 terletak pada koordinat 17.538 N 152.230 W (17°32'17" N 152°13'48" W). Stasiun ID ini berada di Southeast Hawaii, Hawaii Island Amerika Serikat. Hasil yang diperoleh melalui data yang disediakan oleh National Data Buoy Pusat (NDBC) Amerika Serikat terdiri dari tekanan, kecepatan angin, arah angin dan sebagainya. Untuk hasil tekanan atau pressure yang didapat adalah bervariasi mulai dari 1010 hPa hingga 1020 hPa. Di waktu tertentu tekanan bisa menjadi sangat tinggi ataupun sangat rendah, seperti pada tanggal 4 April 2022 dan 22 April 2022 tekanan di stasiun cukup tinggi sekitar diatas 1018 hPa, sedangkan pada sekitar tanggal 28 Maret 2022 tekanan turun cukup drastis mencapai 1011 hPa. Selanjutnya terdapat data wind speed dengan warna oranye, wind gust dengan warna olive, dan wind direction dengan warna biru. Dari hasil grafik yang dihasilkan, dapat dilihat bahwa wind speed dan wind gust relatif sama untuk periode naik dan turunnya, sedangkan berbeda dengan wind direction yang terdapat perbedaan seperti beda periode naik dan turun grafiknya. Nilai grafik yang paling tinggi didominasi oleh wind gust. Nilai wind speed selalu berada atau selalu lebih kecil dari nilai wind gust. Nilai tertinggi wind gust yaitu sekitar mendekati 17.5 yang terjadi pada 24 maret dan 4 april 2022. Sedangkan nilai tertinggi untuk wind speed adalah sekitar 12.5 m/s yang terjadi pada tanggal 4 april 2022. Untuk wind direction sendiri juga cukup bervariasi antara arah west atau barat (270º) hingga north atau utara (0º atau 360º). Pada hasil running modul 4 ini juga diperoleh grafik water temperature dimana untuk nilai water temperature yang diperoleh juga cukup bervariasi mulai darai 24,2 degC hingga  diatas 25 degC. Dari grafik dapat disimpulkan bahwa temperatur terendah terjadi pada tanggal 8 april hingga 13 April 2022. Untuk temperatur tertinggi terjadi pada 26 Maret 2022 dan 5 April 2022. 
 Dari ketiga data grafik yang diperoleh  dapat dilihat bahwa terdapat anomali yang terjadi yaitu sekitar tanggal 4 April 2022 yang menyebabkan kecepatan dan hembusan angin naik dengan diiringinya kenaikan temperatur air serta penurunan tekanan di wilayah tersebut. Anomali tersebut dapat terjadi karena adanya badai berupa hembusan angin yang cukup kencang yang terjadi di wilayah station ID di Southeast Hawaii, Hawaii Island. Namun, hal itu juga dapat terjadi karena adanya perubahan tekanan yang cukup drastis pada periode 4 April 2022 hingga 8 April 2022 sehingga menimbulkan pergerakan angin yang cukup kencang. Data – data parameter yang diperoleh seperti wind speed, pressure, wind direction, wind gust dan juga water temperature dapat digunakan untuk mengetahui arah angin, tinggi gelombang, periode gelombang, dan dan kecepatan angin selama periode waktu tertentu sehingga dapat digunakan sebagai sumber energi lepas pantai dengan menggabungkan energi angin lepas pantai dengan energi gelombang
 
