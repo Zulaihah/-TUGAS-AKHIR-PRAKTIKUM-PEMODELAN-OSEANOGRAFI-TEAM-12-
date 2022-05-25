@@ -95,6 +95,86 @@ dx = 3
 
 dy = 3
 ```
+#Penyelesaian Perhitungan 
+```
+#lama simulasi
+tend = 104
+#tend 1
+dt = 0.5
+#polutan
+px = 150
+py = 130 + 4
+ic = 500 + 84
+
+#perhitungan u dan v ()
+u = C * np.sin(theta*np.pi/180)
+v = C * np.cos(theta*np.pi/180)
+dt_count = 1/((abs(u)/(q*dx))+(abs(v)/(q*dy))+(2*ad/(q*dx**2))+(2*ad/(q*dy**2)))
+
+Nx = int(x/dx)  #number of mesh in x direction
+Ny = int(y/dy)  #number of mesh in y direction
+Nt = int(tend/dt)
+
+#perhitungan titik polutan di buang
+px1 = int(px/dx)
+py1 = int(py/dy)
+
+#fungsi disederhanakan
+lx = u*dt/dx
+ly = v*dt/dy
+ax = ad*dt/dx**2
+ay = ad*dt/dy**2
+cfl = (2*ax + 2*ay + abs(lx) + abs(ly))  #syarat kestabilan CFL
+
+#perhitungan cfl
+if cfl >= q:
+    print('CFL Violated, please use dt :'+str(round(dt_count,4)))
+    sys.exit()
+#%%
+
+#pembuatan grid 
+x_grid = np.linspace(0-dx, x+dx, Nx+2) #ghostnode boundary
+y_grid = np.linspace(0-dx, y+dy, Ny+2) #ghostnode boundary
+t = np.linspace(0, tend, Nt+1)
+x_mesh, y_mesh = np.meshgrid(x_grid,y_grid)
+F = np.zeros((Nt+1, Ny+2, Nx+2))
+
+#kondisi awal
+F[0,py1,px1] = ic
+#%%
+
+#Iterasi
+for n in range (0, Nt):
+    for i in range (1,Ny+1):
+        for j in range (1,Nx+1):
+            F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))) + (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))                                                                              
+    #syarat batas
+    F[n+1,0,:] = 0 #bc bawah
+    F[n+1,:,0] = 0 #bc kiri
+    F[n+1,Ny+1,:] = 0 #bc atas
+    F[n+1,:,Nx+1] = 0 #bc kanan
+    #%%
+    
+    #Pembuatan Grafik
+    ```
+    
+    #output gambar
+    plt.clf()
+    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading = 'auto', edgecolors = 'k')
+    cbar = plt.colorbar(orientation = 'vertical',shrink = 0.95, extend ='both')
+    cbar.set_label(label='concentration', size = 8)
+    #plt clim (0,100)
+    plt.title('Afiq Mahasin_26050120130084 \n t='+str(round(dt*(n+1),3))+', initial condition='+str(ic),fontsize=10)
+    plt.xlabel('x_grid',fontsize=9)
+    plt.ylabel('y_grid',fontsize=9)
+    plt.axis([0, x, 0, y])
+    #pltpause(0.01)
+    plt.savefig(str(n+1)+'.jpg', dpi = 300)
+    plt.pause(0.01)
+    plt.close()
+    print('running timestep ke:' +str(n+1) + 'dari:' +str(Nt) + '('+ percentage(n+1, Nt)+')')
+    print('nilai CFL:' +str(cfl) + 'dengan arah: ' +str(theta))                                                                                                    
+
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
