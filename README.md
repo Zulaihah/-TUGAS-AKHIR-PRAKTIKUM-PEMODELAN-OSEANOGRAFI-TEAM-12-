@@ -173,7 +173,8 @@ for n in range (0, Nt):
     plt.pause(0.01)
     plt.close()
     print('running timestep ke:' +str(n+1) + 'dari:' +str(Nt) + '('+ percentage(n+1, Nt)+')')
-    print('nilai CFL:' +str(cfl) + 'dengan arah: ' +str(theta))                                                                                                    
+    print('nilai CFL:' +str(cfl) + 'dengan arah: ' +str(theta))                                                                                                    ``
+```
 
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
