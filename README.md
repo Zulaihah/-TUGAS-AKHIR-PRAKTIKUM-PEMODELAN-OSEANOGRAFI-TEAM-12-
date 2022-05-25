@@ -154,8 +154,8 @@ for n in range (0, Nt):
     F[n+1,Ny+1,:] = 0 #bc atas
     F[n+1,:,Nx+1] = 0 #bc kanan
     #%%
-    
-    #Pembuatan Grafik
+    ```
+ #Pembuatan Grafik
     ```
     
     #output gambar
