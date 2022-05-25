@@ -32,7 +32,7 @@ Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveks
 
   Persamaan beda hingga dengan metode ini adalah pendekatan beda maju untukturunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arahkecepatan u. Jika u>0 maka turunan terhadap ruang menggunakan pendekatan bedamundur, sebaliknya jika u<0 digunakan pendekatan beda maju. Persamaan (1)didiskritisasi menjadi:
 ![Screenshot (327)](https://user-images.githubusercontent.com/92524237/170057822-b53af133-22b1-4131-a6ff-464eb60268b2.png)
-Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2)digabungkan sehingga diskritisasi persamaan adveksi dengan metode upstream adalah:
+Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2) digabungkan sehingga diskritisasi persamaan adveksi dengan metode upstream adalah:
 ![Screenshot (329)](https://user-images.githubusercontent.com/92524237/170058870-f28a42f8-6edb-4efb-8405-4081cc83da38.png)
 
    - Diskritisasi Model Persamaan Difusi 1 Dimensi
@@ -47,7 +47,7 @@ Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2)digabungka
 ![Screenshot (335)](https://user-images.githubusercontent.com/92524237/170060499-34c19b79-54a3-4e80-92a9-07a03b87dfb4.png)
 
 
-HIDRODINAMIKA
+- **HIDRODINAMIKA**
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
 # 2. METODE DAN HASIL
 1. Modul 2 : Persamaan Adveksi - Difusi 2D
@@ -62,7 +62,7 @@ dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 
 Contoh Script :
 
 #parameter awal
-
+```
 C = 0.84  #nilai kecepatan aliran
 
 ad = 1.84  #koefisiendifusi
@@ -82,9 +82,9 @@ ad = 1.84  #koefisiendifusi
 #skenario 4
 
 theta = 315 + 84 #CFL:0.6250694134910892
-
-#paramter lanjutan
-
+```
+#parameter lanjutan
+```
 q = 0.95
 
 x = 300
@@ -94,16 +94,18 @@ y = 300
 dx = 3
 
 dy = 3
+```
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
-Berikut ini merupakan Script dari pengerjaan modul 3 ini :
-Masukkan library yang diperlukan yakni *Matplotlib* dan *Numpy*
+Berikut ini merupakan *Script* dari pengerjaan modul 3 Persamaan Hidrodinamika 1D Sederhana :
+
+- *Import library* yang diperlukan yakni *Matplotlib* dan *Numpy*
 ```
 import matplotlib.pyplot as plt
 import numpy as np
 ```
-Kemudian masukkan parameter awal 
+- Kemudian masukkan parameter awal 
 ```
 p = 5000		#Panjang Grid
 T = 1200		#Waktu Simulasi
@@ -113,7 +115,7 @@ dt = 2
 dx = 100
 To = 300		#Periode
 ```
-Masukkan pula parameter lanjutannya
+- Masukkan pula parameter lanjutannya
 ```
 g = 9.8		#Koefisien Gravitasi
 pi = np.pi 
@@ -124,7 +126,7 @@ k = 2*pi/L		#Koefisien Panjang Gelombang
 Mmax = int(p//dx)
 Nmax = int(T//dt)
 ```
-Selanjutnya, dilakukan penyelesaian persamaan hidrodinamika 1D
+- Selanjutnya, dilakukan penyelesaian persamaan hidrodinamika 1D
 ```
 zo = [None for _ in range(Mmax)]
 uo = [None for _ in range(Mmax)]
@@ -150,7 +152,7 @@ for i in range(1, Nmax+1):
     uo[p] = ub[p]
     zo[p] = zb[p]
 ```
-Lalu, dibuat grafik dengan menambahkan identitas diri
+- Lalu, dibuat grafik dengan menambahkan identitas diri
 ```
 def rand_col_hex_string():
   return f'#{format(np.random.randint(0,16777215), "#08x")[2:]}'
@@ -200,17 +202,20 @@ for i in range(1, 16):
           title='''Team 12 Praktikum Pemodelan Oseanografi
           Perubahan Elevasi Muka Air Dalam Waktu Tertentu di Sepanjang Grid''')
   ax3.grid()
-
+```
+- Menampilkan grafik dengan perintah
+```
 plt.show()
 ```
+
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
-pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali.Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
+Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali. Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 
-Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
+Langkah pengerjaan dalam modul 4 ini adalah sebagai berikut:
 
-1 Pembuatan script melalui jupyter notebook
-
+1. Pembuatan *script* melalui *jupyter notebook*
+```
    #Copyright (c) 2018 Siphon Contributors.
    
    #Distributed under the terms of the BSD 3-clause license.
@@ -227,13 +232,16 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    the basic meteorological data from a buoy and make a simple plot.
    
    """
--import library yang digunakan
+```
+- *import library* yang digunakan
+```
    import matplotlib.pyplot as plt
 
    from siphon.simplewebservice.ndbc import NDBC
-  
+```
 
--Masukkan stasiu ID sesuai yang ditentukan (Sesuai ketentuan NIM)
+- Masukkan stasiun ID sesuai yang ditentukan (Sesuai ketentuan NIM)
+```
 
    #####################################################
    
@@ -244,8 +252,10 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    df = NDBC.realtime_observations('51004') #Station ID
    
    df.head()
+```
    
--Memberikan perintah plotting/melakukan plotting data pada grafik
+- Memberikan perintah *plotting*/melakukan *plotting* data pada grafik
+```
 
    #####################################################
    
@@ -254,9 +264,10 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
    
    ax2b = ax2.twinx()
+```
 
--Plotting data pressure, water temperature, wind speed, gust dan direction dalam model hidrodinamika 2D
-
+- *Plotting* data *pressure, water temperature, wind speed, gust* dan *direction* dalam model hidrodinamika 2D
+```
    #Pressure
    
    ax1.plot(df['time'], df['pressure'], color='black')
@@ -284,12 +295,13 @@ Langkah pengerjaan dalam modul 4 ini adalah sebagai beriku:
    ax3.plot(df['time'], df['water_temperature'], color='tab:brown')
    
    ax3.set_ylabel('Water Temperature [degC]')
+```
 
--Menampilkan grafik dengan perintah
-
+- Menampilkan grafik dengan perintah
+```
    plt.show() 
-   
--Diperoleh hasil berupa 3 grafik sebagai berikut
+```
+- Diperoleh hasil berupa 3 grafik sebagai berikut
 ![image](https://user-images.githubusercontent.com/106015798/170116656-881bda47-2565-47e9-9bec-6028f310e416.png)
 
 2. Masuk ke website NDBC lalu stasiun ID disesuaikan dengan ketentuan NIM
