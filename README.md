@@ -30,34 +30,43 @@ Dimana f menggambarkan konsentrasi suatu zat terlarut, U adalah koefisien adveks
 
    - Diskritisasi Model Persamaan Adveksi 1 Dimensi
 
-  Persamaan beda hingga dengan metode ini adalah pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u>0 maka turunan terhadap ruang menggunakan pendekatan beda mundur, sebaliknya jika u<0 digunakan pendekatan beda maju. Persamaan (1)didiskritisasi menjadi:
+  Persamaan beda hingga dengan metode ini adalah pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakan pendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan (1) didiskritisasi menjadi:
+  
 ![Screenshot (327)](https://user-images.githubusercontent.com/92524237/170057822-b53af133-22b1-4131-a6ff-464eb60268b2.png)
+
 Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2) digabungkan sehingga diskritisasi persamaan adveksi dengan metode *upstream* adalah:
+
 ![Screenshot (329)](https://user-images.githubusercontent.com/92524237/170058870-f28a42f8-6edb-4efb-8405-4081cc83da38.png)
 
    - Diskritisasi Model Persamaan Difusi 1 Dimensi
 
   Persamaan beda hingga mentode ini adalah pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunan ruang. Bila indeks n untuk waktu, indeks i untuk ruang, dan AD dianggap konstan terhadap ruang dan waktu, maka persamaan (3.1) dapat dideskritisasi menjadi :
+  
 ![Screenshot (331)](https://user-images.githubusercontent.com/92524237/170059773-47f8a34f-6a94-4b95-a9d1-3641ed229661.png)
 
    - Diskritisasi Model Persamaan Adveksi-Difusi1 Dimensi
  
   Penyelesaian persamaan (4.1) dilakukan dengan beda hingga dimana suku Adveksi menggunakan Metode Eksplisit *Upstream*, sedangkan suku difusi menggunakan pendekatan beda maju untuk turunan waktu dan beda pusat untuk turunan ruang.
+  
 ![Screenshot (333)](https://user-images.githubusercontent.com/92524237/170060292-6b0c9f94-57d0-4669-a031-1880b8db3a83.png)
 ![Screenshot (335)](https://user-images.githubusercontent.com/92524237/170060499-34c19b79-54a3-4e80-92a9-07a03b87dfb4.png)
 
 
 - **HIDRODINAMIKA**
+
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
 # 2. METODE DAN HASIL
 1. Modul 2 : Persamaan Adveksi - Difusi 2D
 2. Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 3. Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 # 2.1 Modul 2 : Persamaan Adveksi - Difusi 2D
-Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.Persamaan pembangun yang berhubungan dengan transportasi konsentrasi polutan berupa persamaan Difusi 2D yakni 
+Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.Persamaan pembangun yang berhubungan dengan transportasi konsentrasi polutan berupa persamaan Difusi 2D yakni :
+
 ![image](https://user-images.githubusercontent.com/78490254/169945155-12fcf280-d912-42c3-82e3-6df12c6b44da.png)
-dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 dan 𝑦. Konstanta 𝑉𝑥 dan 𝑉𝑦 disini menyatakan kecepatan aliran yang searah sumbu 𝑥 dan 𝑦 berturut turut. Juga 𝐷𝑥 dan 𝐷𝑦 juga merupakan konstanta yang menyatakan koefisien difusi yang searah sumbu 𝑥 dan sumbu 𝑦 berturut turut. Adapun syarat awal dan syarat batas yang menyertai persamaan pembangun akan dimulai dari domain yang teratur sebagai verifikasi solusi numerik, hingga ke domain yang tidak teratur,dan persamaan diskritisasi untuk model adveksi difusi 2D adalah sebagai berikut:
-![image](https://user-images.githubusercontent.com/78490254/169945433-59a4eae5-71df-4a11-b1e8-fc93e0b8c75e.png)
+
+Dimana 𝐶 menyatakan konsentrasi polutan yang terangkut dalam arah sumbu 𝑥 dan 𝑦. Konstanta 𝑉𝑥 dan 𝑉𝑦 disini menyatakan kecepatan aliran yang searah sumbu 𝑥 dan 𝑦 berturut turut. Juga 𝐷𝑥 dan 𝐷𝑦 juga merupakan konstanta yang menyatakan koefisien difusi yang searah sumbu 𝑥 dan sumbu 𝑦 berturut turut. Adapun syarat awal dan syarat batas yang menyertai persamaan pembangun akan dimulai dari domain yang teratur sebagai verifikasi solusi numerik, hingga ke domain yang tidak teratur,dan persamaan diskritisasi untuk model adveksi difusi 2D adalah sebagai berikut:
+
+<img width="493" alt="image" src="https://user-images.githubusercontent.com/105976675/170174342-46d3dd68-04d4-4ce3-8bc9-535a07cb120b.png">
 
 Contoh Script :
 
@@ -182,6 +191,7 @@ Contoh Gambar Grafik Adveksi-Difusi 2D
 
 
 # 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
+
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
 Berikut ini merupakan *Script* dari pengerjaan modul 3 Persamaan Hidrodinamika 1D Sederhana :
@@ -294,8 +304,22 @@ for i in range(1, 16):
 plt.show()
 ```
 
+Diperoleh hasil berupa 4 grafik sebagai berikut :
+1. Grafik Perubahan Kecepatan Arus Dalam Grid Tertentu di Sepanjang Waktu
 
+<img width="335" alt="image" src="https://user-images.githubusercontent.com/105976675/170175490-4814cc53-fb24-4333-b330-6e3763cdcc40.png">
 
+2. Grafik Perubahan Elevasi Permukaan Air Dalam Grid Tertentu di Sepanjang Waktu
+
+<img width="342" alt="image" src="https://user-images.githubusercontent.com/105976675/170175563-078ef4a7-9863-42cb-a964-6fa24ad1df2e.png">
+
+3. Grafik Perubahan Kecepatan Arus  Dalam Waktu Tertentu di Sepanjang Grid
+
+<img width="338" alt="image" src="https://user-images.githubusercontent.com/105976675/170175626-feb51f73-5c9d-4475-b85a-f3f399751f04.png">
+
+4. Grafik Perubahan Elevasi Permukaan Air Dalam Waktu Tertentu di Sepanjang Grid
+
+<img width="343" alt="image" src="https://user-images.githubusercontent.com/105976675/170175666-298b1a0a-6e41-4276-a41e-6fcfc23955ab.png">
 
 # 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
