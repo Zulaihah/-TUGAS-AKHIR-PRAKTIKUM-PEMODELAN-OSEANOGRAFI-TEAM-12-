@@ -51,7 +51,6 @@ Untuk mengurangi keruwetan pemrograman, maka persamaan (1.1) dan (1.2) digabungk
 ![Screenshot (333)](https://user-images.githubusercontent.com/92524237/170060292-6b0c9f94-57d0-4669-a031-1880b8db3a83.png)
 ![Screenshot (335)](https://user-images.githubusercontent.com/92524237/170060499-34c19b79-54a3-4e80-92a9-07a03b87dfb4.png)
 
-
 - **HIDRODINAMIKA**
 
 Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressible yang dipengaruhi oleh gaya internal dan eksternal. Dalam hidrodinamika laut gaya-gaya yang terpenting adalah gaya gravitasi, gaya gesekan, dan gaya coriolis. Dalam oseanografi, mekanika fluida digunakan berdasarkan mekanika Newton yang dimodifikasi dengen memperhitungkan turbulensi.
@@ -59,7 +58,7 @@ Hidrodinamika adalah cabang dari mekanika fluida, khususnya zat cair incompressi
 1. Modul 2 : Persamaan Adveksi - Difusi 2D
 2. Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 3. Modul 4 : Persamaan Hidrodinamika 2D Sederhana
-# 2.1 Modul 2 : Persamaan Adveksi - Difusi 2D
+## 2.1 Modul 2 : Persamaan Adveksi - Difusi 2D
 Adveksi - Difusi 2D merupakan metode eksplisit dimana persamaan beda hingga dengan metode ini menggunakan pendekatan beda maju untuk turunan waktu, sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u > 0 maka turunan terhadap ruang menggunakanpendekatan beda mundur, sebaliknya jika u < 0 digunakan pendekatan beda maju. Persamaan adveksi difusi-2D digunakan untuk memodelkan pergerakan polutan di laut.Persamaan pembangun yang berhubungan dengan transportasi konsentrasi polutan berupa persamaan Difusi 2D yakni :
 
 ![image](https://user-images.githubusercontent.com/78490254/169945155-12fcf280-d912-42c3-82e3-6df12c6b44da.png)
@@ -190,7 +189,7 @@ Contoh Gambar Grafik Adveksi-Difusi 2D
 ![image](https://user-images.githubusercontent.com/78490254/170168857-c1e52d3f-6dfe-4ea9-b058-09a8cb34349d.png)
 
 
-# 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
+## 2.2 Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 
 Pada modul 3 dibahas mengenai model hidrodinamika 1D sederhana dengan menggunakan 2 persamaan yaitu persamaan kontinuitas dan persamaan momentum. Dalam pemodelan yang dilakukan, terdapat dua parameter yang terdapat di dalam pembuatan model yaitu kecepatan arus dan perubahan elevasi muka air dengan masing – masing parameter ini memiliki 2 hasil yaitu di dalam grid tertentu dan dalam waktu tertentu. Sehingga akan menghasilkan 4 grafik yang mewakili kondisi masing-masing parameter.
 
@@ -304,7 +303,7 @@ for i in range(1, 16):
 plt.show()
 ```
 
-Diperoleh hasil berupa 4 grafik sebagai berikut :
+Dari hasil *running script* tersebut diperoleh hasil berupa 4 grafik sebagai berikut :
 1. Grafik Perubahan Kecepatan Arus Dalam Grid Tertentu di Sepanjang Waktu
 
 ![image](https://user-images.githubusercontent.com/105976675/170176262-869b3deb-d660-40c0-9c16-e0dbc1ce78bc.png)
@@ -337,7 +336,7 @@ Pembahasan :
 
 Pada grafik diatas didapatkan model perubahan elevasi permukaan air dalam waktu tertentu di sepanjang grid. Dari grafik di atas, terlihat hasil dari profil perubahan elevasi permukaan air dalam waktu tertentu di sepanjang grid yang interpretasinya hampir sama dengan grafik sebelumnya dimana grafik yang beraturan di awal akan memiliki perubahan saat mendekati akhir grid. Dimana grafik dari grid 0 hingga 47 memiliki arah yang beraturan. Kemudian setelah melalui grid 47, grafik mulai menjadi tidak beraturan karena parameter awal sudah menjadi semakin besar sehingga nilai perhitungan menjadi lebih rumit. Oleh karenanya, grafik tidak beraturan mencapai grid hampir 50 (sekitar 49) baik pada t=1 hingga t=15 yaitu ada yang menjorok ke bawah dan ada yang melengkung lagi ke atas. Nilai kecepatan arus maksimum dalam grid terjadi di awal grid dan saat mendekati grid 40 yaitu sekitar 0.45 satuan kecepatan, sedangkan nilai kecepatan arus minimum dalam grid terjadi di grid yang mendekati nilai 50 atau di grid akhir yaitu sekitar -0.62 satuan elevasi.
 
-# 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
+## 2.3 Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 
 Pada modul 4 dibahas mengenai model hidrodinamika 2D, dimana konsep model hidrodinamika 2D dalam oseanografi digunakan untuk mengetahui parameter-parameter oseanografi seperti kecepatan arus dan kaitannnya dengan pergerakan sedimen, gelombang kaitannya dengan wind shear, tekanan atmosfer dan sebagainya. Dalam pemodelan hidrodinamika 2D kita dapat mengetahui adanya anomali yang mempengaruhi suatu model, dimana hasil model yang diperolwh tidak selamanya sesuai dengan keadaan lapangan dikarenakan adanya anomali. Untuk menjalankan script pemodelan pada modul 4 ini diperlukan mandatory library yaitu matplotlib dan juga siphon. Pada modul ini praktikan mengakses nilai informasi gelombang laut, angin dan tekanan pada lokasi perairan yang diambil dari data gelombang National Buoy Data Center (NDBC) milik NOOA. Informasi dari NDBC ini nantinya akan di plotkan untuk memodelkan kolerasi antara beberapa parameter terkait. 
 
@@ -445,24 +444,27 @@ Dari stasiun ID yang dapatkan yaitu 51004 terletak pada koordinat 17.538 N 152.2
 Dari ketiga data grafik yang diperoleh  dapat dilihat bahwa terdapat anomali yang terjadi yaitu sekitar tanggal 4 April 2022 yang menyebabkan kecepatan dan hembusan angin naik dengan diiringinya kenaikan temperatur air serta penurunan tekanan di wilayah tersebut. Anomali tersebut dapat terjadi karena adanya badai berupa hembusan angin yang cukup kencang yang terjadi di wilayah station ID di Southeast Hawaii, Hawaii Island. Namun, hal itu juga dapat terjadi karena adanya perubahan tekanan yang cukup drastis pada periode 4 April 2022 hingga 8 April 2022 sehingga menimbulkan pergerakan angin yang cukup kencang. Data – data parameter yang diperoleh seperti wind speed, pressure, wind direction, wind gust dan juga water temperature dapat digunakan untuk mengetahui arah angin, tinggi gelombang, periode gelombang, dan dan kecepatan angin selama periode waktu tertentu sehingga dapat digunakan sebagai sumber energi lepas pantai dengan menggabungkan energi angin lepas pantai dengan energi gelombang
 
 # 3. PENERAPAN DALAM BIDANG OSEANOGRAFI
-# Modul 1 : Persamaan Adveksi - Difusi 1D
+## Modul 1 : Persamaan Adveksi - Difusi 1D
 Penerapan Adveksi-Difusi 1D di dalam bidang Oseaografi :
 - Mengetahui konsentrasi dan penyebaran polutan di sungai, parit, dan cabang sungai
 - Pemodelan polutan
 - Konservasi lingkungan
-# Modul 2 : Persamaan Adveksi - Difusi 2D
+## Modul 2 : Persamaan Adveksi - Difusi 2D
 Penerapan Persamaan Persamaan Adveksi - Difusi 2D di dalam bidang oseanografi :
 - Menghitung dan memodelkan persebaran nutrien di laut atau sungai 
 - Menghitung dan memodelkan penyebaran polutan dari proses industri
 - Mengetahui persebaran polutan dari laguna dengan menghitung input dan outputnya
 - Mengetahui sebaran kebocoran minyak di laut
-# Modul 3 : Persamaan Hidrodinamika 1D Sederhana
+## Modul 3 : Persamaan Hidrodinamika 1D Sederhana
 Penerapan Persamaan Hidrodinamika 1D di dalam bidang Oseaografi :
 - Mengetahui sebaran tumpahan minyak mentah yang ada di perairan menggunakan data arah pergerakan arus pasang surut
 - Untuk mengkaji fenomena suhu dingin di perairan 
 - Mengetahui sebaran limbah air panas yang masuk ke perairan
-# Modul 4 : Persamaan Hidrodinamika 2D Sederhana
+## Modul 4 : Persamaan Hidrodinamika 2D Sederhana
 Penerapan Persamaan Hidrodinamika 2D di dalam bidang Oseaografi :
 - Pemodelan gelombang karena angin
 - Pemodelan sampah plastik di laut
 - Pemodelan coastal dynamics dan sedimentasi pantai
+# 4. PENUTUP
+Demikianlah Tugas Akhir Kelompok Praktikum Pemodelan Oseanografi dari Team 12 🤗
+Seluruh anggota team memohon maaf apabila terdapat kesalahan dalam tugas akhir ini dan terimakasih banyak 🙏 
